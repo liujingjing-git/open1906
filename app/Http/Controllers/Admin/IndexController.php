@@ -67,8 +67,7 @@ class IndexController extends Controller
         $res = RegisterModel::where($where)->first();
         // dd($res);
         if($res){
-            if($post['r_pwd']!==$res['r_pwd'])
-            {
+            if($post['r_pwd']!==$res['r_pwd']){
                 echo "<script>alert('密码有误');location.href='login'</script>";
             }
            echo "<script>alert('登录成功');location.href='index'</script>";
