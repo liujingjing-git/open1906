@@ -26,6 +26,7 @@ Route::prefix('/index')->group(function(){
     Route::post('/store','Admin\IndexController@store'); //用户注册
     Route::get('/login','Admin\IndexController@login'); //登录视图
     Route::post('/logindo','Admin\IndexController@logindo'); //执行登录
+    Route::get('/center','Admin\IndexController@center'); 
 });
 /*后台*/
 Route::prefix('/admin')->group(function(){
