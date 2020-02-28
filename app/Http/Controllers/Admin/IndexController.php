@@ -171,8 +171,10 @@ class IndexController extends Controller
             'addtime' => date('Y-m-d H:i:s')
         ];
 
+        echo 'key:'.$redis_h_key;echo "<hr>";
         Redis::hMset($redis_h_key,$info);
         Redis::expire($redis_h_key,7200);
+        
         $respponse = [
             'errot' => 0,   //错误码
             'access_token' => $access_token,  //access_token

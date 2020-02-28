@@ -33,3 +33,9 @@ Route::prefix('/index')->group(function(){
 Route::prefix('/admin')->group(function(){
     Route::get('/list','Admin\AdminController@list');  //展示用户
 });
+
+/*调用接口*/
+Route::prefix('/api')->middleware('AccessToken')->group(function(){
+    Route::get('/test','Admin\ApiController@test');  
+});
+
