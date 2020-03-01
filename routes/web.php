@@ -29,6 +29,7 @@ Route::prefix('/index')->group(function(){
     Route::get('/center','Admin\IndexController@center'); //个人中心
     Route::get('/AccessToken','Admin\IndexController@AccessToken');//获取到access_token
 });
+
 /*后台*/
 Route::prefix('/admin')->group(function(){
     Route::get('/list','Admin\AdminController@list');  //展示用户
@@ -39,3 +40,7 @@ Route::prefix('/api')->middleware('AccessToken')->group(function(){
     Route::get('/test','Admin\ApiController@test');  
 });
 
+/*实现第三方登录(GitHub)*/
+Route::prefix('/github')->group(function(){
+    Route::get('/index','Admin\GitHubController@index');   //GitHub登录页面
+});
