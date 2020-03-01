@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="likes">
-                    <a href="">GitHub登录</a>
+                    <a href="https://github.com/login/oauth/authorize?client_id=25abe6ce3cbcf8f82b6b&redirect_uri=http://open.1906.com/github/callback">GitHub登录</a>
                 </div>
             </div>
         </div>

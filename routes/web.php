@@ -43,4 +43,5 @@ Route::prefix('/api')->middleware('AccessToken')->group(function(){
 /*实现第三方登录(GitHub)*/
 Route::prefix('/github')->group(function(){
     Route::get('/index','Admin\GitHubController@index');   //GitHub登录页面
+    Route::get('/callback','Admin\GitHubController@callback');   //用户授权回跳的页面
 });
